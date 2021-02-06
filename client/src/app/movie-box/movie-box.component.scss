@@ -1,0 +1,19 @@
+$small-img-width: 200px;
+
+.box {
+  min-height: 250px;
+  max-height: 300px;
+  min-width: 220px;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+.box-image {
+  max-width: $small-img-width;
+}
+
+.title {
+  max-width: $small-img-width;
+  word-break: break-word;
+  word-wrap: break-word;
+}

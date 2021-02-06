@@ -1,0 +1,5 @@
+<div class="movie-list">
+  <div *ngFor="let movie of movies">
+    <app-movie-box [movie]="movie" (click)="showDetails(movie.id)"></app-movie-box>
+  </div>
+</div>
