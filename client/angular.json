@@ -61,7 +61,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "next-movies:build"
+            "browserTarget": "next-movies:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
