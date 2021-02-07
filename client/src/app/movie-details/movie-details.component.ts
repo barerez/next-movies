@@ -14,7 +14,7 @@ export class MovieDetailsComponent implements OnInit, OnDestroy {
 
   constructor(private dataService: DataAccessService, private route: ActivatedRoute, private router: Router) { }
   private id: string;
-  private movie: Movie;
+  movie: Movie;
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
