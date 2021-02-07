@@ -1,0 +1,29 @@
+
+.filters {
+  position: relative;
+  left: 0;
+  top: 0;
+  border-bottom: solid 1px deepskyblue;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #b0c4de;
+}
+.filled {
+  color: #1e90ff;
+}
+.bad {
+  color: #deb0b0;
+}
+.filled.bad {
+  color: #ff1e1e;
+}
+
+.filter-item {
+  margin-left: 15px;
+  margin-right: 5px;
+}

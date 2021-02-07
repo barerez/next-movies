@@ -1,0 +1,16 @@
+<div class="filters">
+  <div class="filter-item">Minimum Rating:</div>
+  <ngb-rating [(rate)]="filterState.rating" (rateChange)="rateFilterSelected($event)">
+    <ng-template let-fill="fill" let-index="index">
+      <span class="star" [class.filled]="fill === 100" [class.bad]="index < 4">&#9733;</span>
+    </ng-template>
+  </ngb-rating>
+  <div class="filter-item">Released After:</div>
+  <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-info" id="dropdownBasic1" ngbDropdownToggle>{{filterState.year !== 0 ? filterState.year : 'Please Select'}}</button>
+    <div ngbDropdownMenu>
+      <button *ngFor="let year of years" ngbDropdownItem (click)="yearSelected(year)">{{year}}</button>
+    </div>
+  </div>
+  <button class="btn btn-outline-primary filter-item" (click)="clearFilters()">Clear Filters</button>
+</div>

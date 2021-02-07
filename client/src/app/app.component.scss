@@ -1,0 +1,35 @@
+@import "~src/variables";
+
+@mixin dark-theme-font {
+  font-size: large;
+  color: whitesmoke;
+}
+
+.top-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  background-color: black;
+  color: whitesmoke;
+  min-height: $top-bar-height;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  border-bottom: solid 1px whitesmoke;
+}
+
+.title {
+  @include dark-theme-font;
+  font-size: xx-large;
+  margin-left: 25px;
+}
+
+.main-panel {
+  background-color: black;
+  color: whitesmoke;
+  margin-top: $top-bar-height;
+  min-height: 100vh;
+  height: auto;
+}

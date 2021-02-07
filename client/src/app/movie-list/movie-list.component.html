@@ -1,5 +1,6 @@
-<div class="movie-list">
-  <div *ngFor="let movie of movies">
-    <app-movie-box [movie]="movie" (click)="showDetails(movie.id)"></app-movie-box>
+<div *ngIf="filteredMovies">
+  <app-filter [years]="years" (filterChanged)="applyFilters($event)"></app-filter>
+  <div class="movie-list">
+    <app-movie-box *ngFor="let movie of filteredMovies" [movie]="movie" (click)="showDetails(movie.id)"></app-movie-box>
   </div>
 </div>

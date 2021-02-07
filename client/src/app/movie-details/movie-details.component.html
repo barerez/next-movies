@@ -1,3 +1,21 @@
-<p>
-  movie-details works!
-</p>
+<div class="details" *ngIf="movie">
+  <div class="left-panel">
+
+  <img class="large-img" [alt]="movie.title" [src]="movie.largeimage">
+  </div>
+  <div class="right-panel">
+    <div>
+    <h1>{{movie.title}} ({{movie.released}})</h1>
+    <div>{{movie.synopsis}}</div>
+    <div>Duration: {{movie.runtime}}</div>
+    <div>Rating: <ngb-rating [(rate)]="movie.rating" [readonly]="true">
+      <ng-template let-fill="fill" let-index="index">
+        <span class="star" [class.filled]="fill === 100" [class.bad]="movie.rating < 5">&#9733;</span>
+      </ng-template>
+    </ngb-rating>
+    </div>
+    <a href="https://www.imdb.com/title/{{movie.imdbid}}">Get more details in IMDB</a>
+    </div>
+    <button class="btn btn-danger back-btn" (click)="backToLobby()">Back To Lobby</button>
+  </div>
+</div>

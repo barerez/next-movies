@@ -1,0 +1,38 @@
+.details {
+  display: flex;
+  padding: 5vh 10vh;
+  font-size: x-large;
+}
+
+.large-img {
+  min-height: 80vh;
+  border: solid 3px white;
+}
+
+.left-panel {
+}
+
+.back-btn {
+  margin-top: 20px;
+}
+
+.right-panel {
+  padding-left: 5vw;
+}
+.technical-details {
+  font-size: large;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #b0c4de;
+}
+.filled {
+  color: #1e90ff;
+}
+.bad {
+  color: #deb0b0;
+}
+.filled.bad {
+  color: #ff1e1e;
+}
